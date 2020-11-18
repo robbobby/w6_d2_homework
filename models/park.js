@@ -17,8 +17,8 @@ Park.prototype.removeDinosaur = function(dinosaurName) {
 
 Park.prototype.getMostPopularDinosaur = function() {
     // Turnary opperators
-    return this.dinosaurs.reduce((dino1, dino2) => dino1.guestsAttractedPerDay > dino2.guestsAttractedPerDay
-        ? dino1 : dino2);
+    return this.dinosaurs.reduce((dino1, nextDino) =>
+        dino1.guestsAttractedPerDay > nextDino.guestsAttractedPerDay ? dino1 : nextDino);
 }
 
 Park.prototype.getDinosaursWithSpecies = function(species) {
